@@ -13,11 +13,11 @@ client.on('ready', () => {
 });
 
 client.on('message', async (message) => {
-    if (message.body === `${prefix}ping`) {
+    if (message.body === (`${prefix}ping`) {
         await message.reply('pong');
         console.log(message.body);
     }
-    if (message.body === 'test') {
+    if (message.body === ('test')) {
         await message.reply('Ak udh on cuy');
         console.log(message.body);
     }
@@ -25,11 +25,11 @@ client.on('message', async (message) => {
         await message.react('🖐');
         await message.reply('Hallo cuy');
     }
-    if (message.body.includes('ok' | 'oke')) {
+    if (message.body.includes('ok') || ('oke') {
         await message.reply('kerja bagus');
     }
-    if (message.body.includes('minta foto')) {
-        const media = await MessageMedia.fromUrl('https://');
+    if (message.body.includes('foto')) {
+        const media = await MessageMedia.fromUrl('https://raw.githubusercontent.com/RyuXyro/my-portfolio/main/assets/img/ryuxyro.png');
         return message.sendMessage(media);
     }
     if (message.body.includes(badword)) {
